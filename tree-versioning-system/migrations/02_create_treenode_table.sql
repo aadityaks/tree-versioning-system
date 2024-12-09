@@ -1,0 +1,7 @@
+CREATE TABLE TreeNode (
+    id INTEGER PRIMARY KEY,
+    tree_id INTEGER NOT NULL,
+    data JSON,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (tree_id) REFERENCES Tree(id)
+);
